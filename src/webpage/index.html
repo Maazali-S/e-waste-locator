@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EcoLoop — Find CPCB-Verified E-Waste Recyclers Near You</title>
+<meta name="description" content="EcoLoop helps you locate CPCB-verified e-waste recycling centers across India, learn what's inside your devices, and earn Eco Points for recycling responsibly.">
+<meta name="theme-color" content="#16A34A">
+
+<!-- Open Graph -->
+<meta property="og:title" content="EcoLoop — Recycle Today, Better Tomorrow">
+<meta property="og:description" content="Find verified e-waste recyclers near you and earn rewards for recycling responsibly.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="brand" aria-label="EcoLoop home">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/><path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"/><path d="m14 16-3 3 3 3"/><path d="M8.293 13.596 7.196 9.5 3.1 10.598"/><path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 12 3a1.784 1.784 0 0 1 1.563.885l4.703 8.14"/><path d="m13.378 9.633 4.096 1.098 1.097-4.096"/></svg>
+      </span>
+      <span>EcoLoop<span class="sub">Recycle Today, Better Tomorrow</span></span>
+    </a>
+
+    <nav class="links" aria-label="Primary">
+      <a href="#find">Find Facility</a>
+      <a href="#lookup">Device Lookup</a>
+      <a href="#knowledge">Knowledge Hub</a>
+      <a href="#rewards">Rewards</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="#find" class="btn btn-primary btn-sm">Find Nearby</a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <a href="#find">Find Facility</a>
+    <a href="#lookup">Device Lookup</a>
+    <a href="#knowledge">Knowledge Hub</a>
+    <a href="#rewards">Rewards</a>
+    <a href="#about">About</a>
+    <a href="#find" class="btn btn-primary">Find Nearby</a>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div>
+        <span class="eyebrow">Make e-waste recycling easy &amp; rewarding</span>
+        <h1>Give your old gadgets a <span>second life</span></h1>
+        <p class="lead">Find CPCB-verified e-waste recyclers near you, learn what's inside your devices, and earn Eco Points — for every Indian, in every city.</p>
+
+        <form class="search-card" id="searchForm" role="search">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <label for="citySearch" class="sr-only">Search your city</label>
+          <input type="text" id="citySearch" placeholder="Search your city or allow location">
+          <button type="button" class="btn btn-primary btn-sm" id="useLocationBtn">
+            <span class="btn-label">Use My Location</span>
+          </button>
+        </form>
+        <p class="search-status" id="searchStatus" role="status" aria-live="polite"></p>
+
+        <div class="chip-row">
+          <button class="chip" data-device="Phone"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2" stroke-linecap="round"/></svg> Phone</button>
+          <button class="chip" data-device="Laptop"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M2 20h20" stroke-linecap="round"/></svg> Laptop</button>
+          <button class="chip" data-device="Battery"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="16" height="10" rx="1.5"/><path d="M21 10v4" stroke-linecap="round"/></svg> Battery</button>
+          <button class="chip" data-device="Charger"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" stroke-linejoin="round"/></svg> Charger</button>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 200 200" width="180" height="180" class="bin-icon">
+          <circle cx="100" cy="100" r="92" fill="var(--primary-light)"/>
+          <g fill="none" stroke="var(--primary-dark)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M62 70h76l-8 90a8 8 0 0 1-8 8H78a8 8 0 0 1-8-8l-8-90Z"/>
+            <path d="M50 70h100"/>
+            <path d="M82 70V54a8 8 0 0 1 8-8h20a8 8 0 0 1 8 8v16"/>
+            <path d="M86 90v56M100 90v56M114 90v56"/>
+          </g>
+        </svg>
+        <div class="float f1">📱💻🔋 tracked</div>
+        <div class="float f2">✅ CPCB Verified</div>
+      </div>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat">
+        <div class="num">2,40,000+</div>
+        <div class="label">devices recycled</div>
+      </div>
+      <div class="stat">
+        <div class="num">180+</div>
+        <div class="label">verified facilities</div>
+      </div>
+      <div class="stat">
+        <div class="num">45</div>
+        <div class="label">cities covered</div>
+      </div>
+      <div class="stat">
+        <div class="num">31 tonnes</div>
+        <div class="label">e-waste diverted from landfills</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Three Steps</div>
+      <h2>How it works</h2>
+      <p>From finding a center to earning rewards — recycling responsibly has never been easier.</p>
+    </div>
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="ring" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3>1. Find</h3>
+        <p>Locate your nearest verified recycler in seconds.</p>
+      </div>
+      <div class="how-card">
+        <div class="ring" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3" stroke-linecap="round"/></svg>
+        </div>
+        <h3>2. Learn</h3>
+        <p>Discover what's inside your device and why it matters.</p>
+      </div>
+      <div class="how-card">
+        <div class="ring" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/><path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"/><path d="m14 16-3 3 3 3"/></svg>
+        </div>
+        <h3>3. Recycle</h3>
+        <p>Drop it off, recycle responsibly, and earn rewards.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="find" style="background:var(--bg-alt);">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:32px;">
+      <div class="kicker">Near You</div>
+      <h2>Find a facility close by</h2>
+      <p>See nearest verified recyclers with live directions and open status.</p>
+    </div>
+    <div class="facility-wrap">
+      <div class="map-box" role="img" aria-label="Map showing three recycling facility locations nearby">
+        <div class="pin p1" title="EcoRecycle Solutions"></div>
+        <div class="pin p2" title="GreenWEEE Hub"></div>
+        <div class="pin p3" title="Suraksha E-Waste Center"></div>
+      </div>
+      <div class="facility-list" id="facilityList">
+        <!-- populated by script.js, static fallback below for no-JS -->
+        <div class="facility-card">
+          <div class="top">
+            <h3>EcoRecycle Solutions</h3>
+            <span class="badge">CPCB Verified</span>
+          </div>
+          <div class="meta">Pune · 2.1 km · Open now</div>
+          <div class="row-btn">
+            <span class="rating">★ 4.8 (130)</span>
+            <a class="btn btn-secondary btn-sm" href="https://www.google.com/maps/search/EcoRecycle+Solutions+Pune" target="_blank" rel="noopener">Get Directions</a>
+          </div>
+        </div>
+        <div class="facility-card">
+          <div class="top">
+            <h3>GreenWEEE Hub</h3>
+            <span class="badge">CPCB Verified</span>
+          </div>
+          <div class="meta">Mumbai · 3.4 km · Open now</div>
+          <div class="row-btn">
+            <span class="rating">★ 4.4 (99)</span>
+            <a class="btn btn-secondary btn-sm" href="https://www.google.com/maps/search/GreenWEEE+Hub+Mumbai" target="_blank" rel="noopener">Get Directions</a>
+          </div>
+        </div>
+        <div class="facility-card">
+          <div class="top">
+            <h3>Suraksha E-Waste Center</h3>
+            <span class="badge">CPCB Verified</span>
+          </div>
+          <div class="meta">Sholapur · 4.8 km · Closes 6 PM</div>
+          <div class="row-btn">
+            <span class="rating">★ 4.6 (72)</span>
+            <a class="btn btn-secondary btn-sm" href="https://www.google.com/maps/search/Suraksha+E-Waste+Center+Sholapur" target="_blank" rel="noopener">Get Directions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="lookup">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Popular Categories</div>
+      <h2>Device lookup</h2>
+      <p>Not sure what counts as e-waste? Start with the basics.</p>
+    </div>
+    <div class="device-grid">
+      <button class="device-card" data-device="Phone">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2" stroke-linecap="round"/></svg></span>
+        Phone
+      </button>
+      <button class="device-card" data-device="Laptop">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M2 20h20" stroke-linecap="round"/></svg></span>
+        Laptop
+      </button>
+      <button class="device-card" data-device="Battery">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="16" height="10" rx="1.5"/><path d="M21 10v4" stroke-linecap="round"/></svg></span>
+        Battery
+      </button>
+      <button class="device-card" data-device="Printer">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V3h12v6"/><rect x="4" y="9" width="16" height="8" rx="1"/><path d="M6 17v4h12v-4"/></svg></span>
+        Printer
+      </button>
+      <button class="device-card" data-device="TV">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="12" rx="1"/><path d="M9 20h6M12 17v3" stroke-linecap="round"/></svg></span>
+        TV
+      </button>
+      <button class="device-card" data-device="Others">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></svg></span>
+        Others
+      </button>
+    </div>
+  </div>
+</section>
+
+<section id="knowledge" style="background:var(--bg-alt);">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Knowledge Hub</div>
+      <h2>Learn about e-waste &amp; its impact</h2>
+      <p>Understand what's inside your devices — the harmful and the recoverable.</p>
+    </div>
+    <div class="know-grid">
+      <div class="know-card c1"><h3>Lead</h3><p>Can harm the brain and nervous system if improperly disposed of.</p></div>
+      <div class="know-card c2"><h3>Mercury</h3><p>Affects the nervous system and contaminates water sources.</p></div>
+      <div class="know-card c3"><h3>Plastic</h3><p>Harms our environment when incinerated or left in landfills.</p></div>
+      <div class="know-card c4"><h3>Gold</h3><p>Can be recovered and reused — a reason to recycle responsibly.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="rewards">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Eco Rewards</div>
+      <h2>Get rewarded for recycling</h2>
+      <p>Earn Eco Points every time you drop off a device at a verified facility, then redeem them for real perks.</p>
+    </div>
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="ring" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h3>Earn points</h3>
+        <p>Get 10–200 Eco Points per device, based on category and condition.</p>
+      </div>
+      <div class="how-card">
+        <div class="ring" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg>
+        </div>
+        <h3>Redeem vouchers</h3>
+        <p>Trade points for discounts with our retail and utility partners.</p>
+      </div>
+      <div class="how-card">
+        <div class="ring" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4Z"/></svg>
+        </div>
+        <h3>Track your impact</h3>
+        <p>See your personal recycling footprint grow with every drop-off.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer id="about">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="brand">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/><path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"/><path d="m14 16-3 3 3 3"/></svg>
+          </span>
+          EcoLoop
+        </div>
+        <p>Building a cleaner, greener India together — one device at a time.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#find">Find Facility</a></li>
+          <li><a href="#lookup">Device Lookup</a></li>
+          <li><a href="#knowledge">Knowledge Hub</a></li>
+          <li><a href="#rewards">Eco Rewards</a></li>
+          <li><a href="#about">About Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="https://cpcb.nic.in/" target="_blank" rel="noopener">CPCB Guidelines</a></li>
+          <li><a href="https://cpcb.nic.in/e-waste/" target="_blank" rel="noopener">E-Waste Rules</a></li>
+          <li><a href="#how">Recycling Process</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="mailto:hello@ecoloop.in">Contact Us</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 EcoLoop. All rights reserved.</span>
+      <div class="socials">
+        <a href="#" aria-label="EcoLoop on Facebook"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M13.5 21v-8.1h2.7l.4-3.2h-3.1V7.7c0-.9.3-1.6 1.6-1.6h1.7V3.2C16.5 3.1 15.5 3 14.4 3c-2.4 0-4.1 1.5-4.1 4.2v2.5H7.6v3.2h2.7V21h3.2Z"/></svg></a>
+        <a href="#" aria-label="EcoLoop on Instagram"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="#" aria-label="EcoLoop on X"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M4 4l16 16M20 4 4 20"/></svg></a>
+        <a href="#" aria-label="EcoLoop on LinkedIn"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M4.98 3.5a2 2 0 1 1 0 4 2 2 0 0 1 0-4ZM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2 3.77-2 4 0 4.75 2.6 4.75 6v6.3H17.5v-5.6c0-1.35-.02-3.1-1.9-3.1-1.9 0-2.2 1.5-2.2 3v5.7H9Z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
