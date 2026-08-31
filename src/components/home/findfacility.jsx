@@ -54,7 +54,7 @@ export default function FindFacilitySection() {
               lineHeight: 1.7,
             }}
           >
-            Locate nearby CPCB-authorized e-waste recycling
+            Locate nearby authorized e-waste recycling
             centers and recycle safely.
           </p>
         </div>
@@ -160,9 +160,10 @@ export default function FindFacilitySection() {
               <p
                 style={{
                   opacity: 0.85,
+                  lineHeight: 1.5,
                 }}
               >
-                {facility.distance} away
+                {facility.address}
               </p>
 
               <div
@@ -176,7 +177,7 @@ export default function FindFacilitySection() {
               >
                 <ShieldCheck size={16} />
 
-                CPCB Verified
+                Verified
               </div>
 
               <button
