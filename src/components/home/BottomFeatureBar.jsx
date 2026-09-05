@@ -5,6 +5,7 @@ import {
   Trophy,
   ArrowRight,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function BottomFeatureBar() {
   const features = [
@@ -48,7 +49,7 @@ export default function BottomFeatureBar() {
               Recycle smarter, earn rewards, and help build a greener future.
             </p>
           </div>
-
+          <Link to="/onboarding">
           <button
             style={{
               border: "none",
@@ -65,6 +66,7 @@ export default function BottomFeatureBar() {
           >
             Get Started <ArrowRight size={18} />
           </button>
+          </Link>
         </div>
 
         <div

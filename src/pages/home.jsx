@@ -8,6 +8,7 @@ import KnowledgeSnapshot from "../components/home/knowledgesnap";
 import DeviceLookupPreview from "../components/home/DeviceLookupPreview";
 import BottomFeatureBar from "../components/home/BottomFeatureBar";
 import Footer from "../components/layout/footer";
+import FooterReveal from "../components/home/FooterReveal";
 
 export default function Home(){
 
@@ -21,7 +22,8 @@ export default function Home(){
       <FindFacilitySection/>
       <KnowledgeSnapshot/>
       <DeviceLookupPreview/>
-      <BottomFeatureBar/>
+      <BottomFeatureBar />
+      <FooterReveal />
 
     </div>
   );

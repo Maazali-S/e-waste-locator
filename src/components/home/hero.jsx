@@ -1,4 +1,5 @@
 import { Search, MapPin } from "lucide-react";
+import heroBin from "../../assets/hero-bin.png";
 
 export default function Hero() {
   return (
@@ -38,27 +39,27 @@ export default function Hero() {
 
           {/* Popular Cities */}
           <div className="mt-5 flex items-center gap-3 flex-wrap">
-            <span className="text-gray-500 text-sm font-medium">Popular:</span>
+            <span className="text-gray-500 text-sm font-medium">
+              Popular:
+            </span>
 
-            {["Pune", "Mumbai", "Bangalore", "Delhi"].map(
-              (city) => (
-                <button
-                  key={city}
-                  className="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm text-gray-700 hover:border-green-500 hover:text-green-600 hover:bg-green-50 transition"
-                >
-                  {city}
-                </button>
-              )
-            )}
+            {["Pune", "Mumbai", "Bangalore", "Delhi"].map((city) => (
+              <button
+                key={city}
+                className="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm text-gray-700 hover:border-green-500 hover:text-green-600 hover:bg-green-50 transition"
+              >
+                {city}
+              </button>
+            ))}
           </div>
         </div>
 
-        {/* Right Image */}
+        {/* Right Hero Image */}
         <div className="flex justify-center">
           <img
-            src="/images/hero-bin.png"
+            src={heroBin}
             alt="Green recycling bin filled with electronic devices"
-            className="w-full max-w-[470px] object-contain"
+            className="w-full max-w-[500px] object-contain drop-shadow-2xl"
           />
         </div>
       </div>
