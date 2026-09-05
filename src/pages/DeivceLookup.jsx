@@ -51,6 +51,8 @@ export default function DeviceLookup() {
         keyboard: "Keyboard",
         mouse: "Mouse",
         remote: "Remote",
+        battery: "Battery",
+        printer: "Printer",
       };
 
       const mappedName = mapping[best.class];
